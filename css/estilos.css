@@ -1,5 +1,6 @@
 /* CSS Document */
 @import url(menu.css);
+@import url(banner.css);
 *{
 	margin:0;
 	padding:0;
@@ -46,6 +47,20 @@ header{
 
 .header .contenedor{
 	display:table;	
+	
+	
+}
+
+
+section{
+	width:100%;
+	margin-bottom:25px;	
+	
+	
+}
+
+#bienvenidos{
+	text-align:center;	
 	
 	
 }
