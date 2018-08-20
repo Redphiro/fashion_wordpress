@@ -3,11 +3,11 @@
 @import url(banner.css);
 @import url(blog.css);
 @import url(info.css);
+@import url(galeria.css);
 *{
 	margin:0;
 	padding:0;
 	box-sizing:border-box;	
-	
 	
 }
 
@@ -69,6 +69,11 @@ section{
 
 #bienvenidos{
 	text-align:center;	
+	
+	
+}
+footer{
+	background-color:#ddd;	
 	
 	
 }
