@@ -2,7 +2,11 @@
   text-align:center;	
 }
 
-
+#blog p{
+  font-size:11px;		
+  text-align:center;
+	
+}
 #blog .contenedor{
 	display:flex;
 	justify-content: center;
@@ -18,8 +22,6 @@
 #blog img{
 	width:100%;
 	max-width:280px;
-	
-	
 }
 
 @media (min-width:1024px){
