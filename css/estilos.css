@@ -49,6 +49,16 @@ header{
 	display:table;	
 }
 
+.logo{
+  float:left;
+  width:50%;
+  text-align: left;
+  color:white;	
+	
+	
+	
+}
+
 
 section{
 	width:100%;
