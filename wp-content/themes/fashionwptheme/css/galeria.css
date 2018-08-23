@@ -1,0 +1,49 @@
+/* CSS Document */
+#galeria{
+	text-align:center;	
+	
+	
+}
+
+
+#galeria .contenedor{
+	display:flex;
+	justify-content: center;
+	flex-wrap:wrap;
+	
+}
+
+#galeria article{
+	margin:15px;
+	
+	
+}
+
+#galeria a img{
+	margin:15px;	
+	
+	
+}
+
+#galeria img{
+	width:100%;
+	max-width:280px;
+	
+	
+}
+
+
+@media (min-width:1024px){
+
+	#galeria .article {
+    	display: inline-flex;
+		
+	}
+	
+	#galeria a img{
+		display:inline-flex;	
+	
+	
+	}
+}
+
