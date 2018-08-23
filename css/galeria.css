@@ -19,6 +19,12 @@
 	
 }
 
+#galeria a img{
+	margin:15px;	
+	
+	
+}
+
 #galeria img{
 	width:100%;
 	max-width:280px;
@@ -32,6 +38,12 @@
 	#galeria .article {
     	display: inline-flex;
 		
+	}
+	
+	#galeria a img{
+		display:inline-flex;	
+	
+	
 	}
 }
 
