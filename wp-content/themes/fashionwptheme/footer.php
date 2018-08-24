@@ -13,10 +13,10 @@
     </footer>
 	 <!--Script-->
     <!--Archivos Js-->
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_url');?>/js/jquery-3.3.1.min.js"></script>
     
 	<!-- LightGallery Lightbox -->
-	<script src="lightgallery/js/lightgallery-all.min.js"></script>
+	<script src="<?php echo get_bloginfo('template_url');?>/lightgallery/js/lightgallery-all.min.js"></script>
     
 
     <script type="text/javascript">

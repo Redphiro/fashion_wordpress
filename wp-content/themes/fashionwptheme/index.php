@@ -1,7 +1,7 @@
-
+<?php get_header(); ?>
     <main>
     	<section id="banner">
-        	<img src="img/banner.jpg">
+        	<img src="<?php echo get_bloginfo('template_url'); ?>/img/banner.jpg">
             <div class="contenedor">
             	<h2>Fashion Jeans</h2>
                 <p>Moda de los 90s</p>
@@ -18,19 +18,19 @@
         	<h3>Lo ultimo de nuestro blog</h3>
             <div class="contenedor">
             <article>
-            	<img src="img/articulo-1.jpg">
+            	<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-1.jpg">
             	<h4>Articulo 1</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </article>
             
             <article>
-            	<img src="img/articulo-2.jpg">
+            	<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-2.jpg">
             	<h4>Articulo 2</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </article>
             
             <article>
-            	<img src="img/articulo-3.jpg">
+            	<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
             	<h4>Articulo 3</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </article>
@@ -40,22 +40,22 @@
         	<h3>Nuestras Marcas Asociadas</h3>
             <div class="contenedor">
             		<div class="info-fashion">
-                    	<img src="img/calvinklein.jpg">
+                    	<img src="<?php echo get_bloginfo('template_url'); ?>/img/calvinklein.jpg">
                         <h4>Calvin Klein</h4>
                     </div>
                     
                     <div class="info-fashion">
-                    	<img src="img/lee.jpg">
+                    	<img src="<?php echo get_bloginfo('template_url'); ?>/img/lee.jpg">
                         <h4>Lee</h4>
                     </div>
                     
                     <div class="info-fashion">
-                        <img src="img/wrangler.jpg">
+                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/wrangler.jpg">
                         <h4>Wrangler</h4>
                     </div>
                     
                     <div class="info-fashion">
-                       <img src="img/levis.jpg">
+                       <img src="<?php echo get_bloginfo('template_url'); ?>/img/levis.jpg">
                        <h4>Levis</h4>
                     </div>
             
@@ -63,4 +63,4 @@
         
         </section>
 	</main>
-    
+ <?php get_footer(); ?>   
