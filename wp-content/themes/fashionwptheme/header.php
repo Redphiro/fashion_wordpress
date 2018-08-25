@@ -17,10 +17,10 @@
             <label class="icon-menu" for="menu-bar"></label>
             <!--<label class="fontawesome-align-justify" for="menu-bar"></label>-->
             <nav class="menu">
-                <a href="index.php">Inicio</a>
-                <a href="#">Galeria</a>
-                <a href="#">Blog</a>
-                <a href="#">Contacto</a>
+                <a href="<?php echo get_bloginfo('url'); ?>">Inicio</a>
+                <a href="<?php echo get_bloginfo('url'); ?>/#galeria">Galeria</a>
+                <a href="<?php echo get_bloginfo('url'); ?>/#blog">Blog</a>
+                <a href="<?php echo get_bloginfo('url'); ?>/#contacto">Contacto</a>
             </nav>
          </div>
      </header>

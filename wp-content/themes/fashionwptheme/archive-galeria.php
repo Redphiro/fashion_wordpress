@@ -11,7 +11,11 @@
         </section>
         <!--Contenedor Galeria-->
         <section id="galeria">
+       
+        
+        
         	<h2>Galeria</h2>
+            <p>Lipsum</p>
             <div class="contenedor" id="lightgallery">
             	
                  <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-1.jpg">
@@ -50,6 +54,7 @@
             	
             
         	</div>
+            
         </section>
         
         <!--/Contenedor Galeria-->
