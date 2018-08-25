@@ -1,7 +1,7 @@
 <?php get_header ();?>
 <main>
     	<section id="banner">
-        	<img src="img/banner.jpg">
+        	<img src="<?php echo get_bloginfo('template_url'); ?>/img/banner.jpg">
             <div class="contenedor">
             	<h2>Fashion Jeans</h2>
                 <p>Moda de los 90s</p>

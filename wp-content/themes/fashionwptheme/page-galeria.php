@@ -12,10 +12,14 @@
         <!--Contenedor Galeria-->
         <section id="galeria">
        
-        
-        
-        	<h2>Galeria</h2>
-            <p>Lipsum</p>
+           <?php
+		   $my_query = new WP_Query('pagename=noticias');
+			while($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID;
+           ?>
+        	<h2><?php echo get_the_title(); ?></h2>
+            <p><?php echo get_the_content(); ?></p>
+			
+			<?php endwhile; ?>
             <div class="contenedor" id="lightgallery">
             	
                  <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-1.jpg">
