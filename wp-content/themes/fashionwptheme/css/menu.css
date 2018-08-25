@@ -49,7 +49,7 @@ header label{
 }
 
 
-#menu-bar:checked ~.menu{
+#menu-bar:checked ~.menu {
 	transform: translateX(0%);	
 	
 	
@@ -64,6 +64,12 @@ header label{
 		float:right;
 		display:flex;
 			
+	}
+	
+	ul{
+		display:flex;	
+		
+		
 	}
 	.menu li a{
 		border:none;	
