@@ -54,6 +54,11 @@ add_action('customize_register', 'custom_theme_settings');
 }
 add_action('admin_head', 'css_para_admin');*/
 
+//Habilitar Menu para nuestro template
+register_nav_menus(array('menu' => 'Menu Principal', ));
+
+
+
 
 //Habilitar paginaciones para posttype
 function custom_posts_per_page($query)

@@ -16,11 +16,22 @@
              <input type="checkbox" id="menu-bar">
             <label class="icon-menu" for="menu-bar"></label>
             <!--<label class="fontawesome-align-justify" for="menu-bar"></label>-->
-            <nav class="menu">
+            <!--<nav class="menu">-->
+            <nav>
+              <!--
                 <a href="<?php echo get_bloginfo('url'); ?>">Inicio</a>
                 <a href="<?php echo get_bloginfo('url'); ?>/#galeria">Galeria</a>
                 <a href="<?php echo get_bloginfo('url'); ?>/#blog">Blog</a>
                 <a href="<?php echo get_bloginfo('url'); ?>/#contacto">Contacto</a>
+                -->
+                <?php wp_nav_menu(
+					array(
+					  'container' => false,
+					  'items_wrap' => '<ul class="menu">%3$s</ul>',
+					  'theme_location' =>'menu'
+					  						
+				     ));
+				?>
             </nav>
          </div>
      </header>
