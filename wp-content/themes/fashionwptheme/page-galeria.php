@@ -13,7 +13,7 @@
         <section id="galeria">
        
            <?php
-		   $my_query = new WP_Query('pagename=noticias');
+		   $my_query = new WP_Query('pagename=galeria');
 			while($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID;
            ?>
         	<h2><?php echo get_the_title(); ?></h2>
