@@ -60,6 +60,7 @@
         <section id="info">
         	<h3>Nuestras Marcas Asociadas</h3>
             <div class="contenedor">
+             <!--
             		<div class="info-fashion">
                     	<img src="<?php echo get_bloginfo('template_url'); ?>/img/calvinklein.jpg">
                         <h4>Calvin Klein</h4>
@@ -79,7 +80,28 @@
                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/levis.jpg">
                        <h4>Levis</h4>
                     </div>
+                   -->
+             <?php
+               global $paged;
+			   $my_query_current = $paged ? $paged : 1;
+			   $my_query_args = array('paged' => $my_query_current,
+			                          'post_type' => 'marcas',
+									  'tipo_marcas' => $_GET['tipo'],
+									  );
+				$my_query = new WP_Query($my_query_args);
+				while ($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID; 					  
             
+            ?>
+             <div class="info-fashion">
+                <img src="<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>">
+                <h4><?php echo get_the_title(); ?></h4>
+             </div>      
+            
+            <?php
+			 endwhile;
+			
+			?>
+                   
             </div>
         
         </section>
