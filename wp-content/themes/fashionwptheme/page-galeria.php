@@ -1,5 +1,5 @@
 <?php get_header ();?>
-
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <main>
     	<section id="banner">
         	<img src="<?php echo get_bloginfo('template_url'); ?>/img/banner.jpg">
@@ -57,24 +57,23 @@
             		</a>
             	
                    -->
-                   <?php
-				   		global $paged;
-						$my_query_current = $paged ? $paged : 1;
-						$my_query_args = array ('paged' => $my_query_current,
-						                        'post_type' => 'galerias',
-									  			);
-				   
-				         $my_query = new WP_Query($my_query_args);
-						while ($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID;
-				   ?>
-                   <a href="<?php echo imageFeatured($post->ID,'large');?>">
-                   		<img src="<?php echo imageFeatured($post->ID,'medium'); //tamaños son: thumbnail, medium, large, full ?>" class="img-responsive" style="width: 100%">
-                   </a>
-                   
-                   <?php 
-					endwhile; 
-			 	 ?>
-                   
+                 
+                 <?php 
+
+					$images = get_field('galerias_fotos');
+
+					if( $images ): ?>
+					
+						<?php foreach( $images as $image ): ?>
+							<a href="<?php echo $image['url']; ?>">
+								 <img src="<?php echo $image['sizes']['thumbnail']; ?>">
+							</a>
+						<?php endforeach; ?>
+					
+				<?php endif; ?>
+                 
+                 
+                  
                    
         	</div>
             
@@ -83,7 +82,6 @@
         <!--/Contenedor Galeria-->
      
    </main>
-
-
+<?php endwhile; else: endif; ?>
 
 <?php get_footer ();?>
