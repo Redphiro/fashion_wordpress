@@ -50,6 +50,7 @@
             	<img src="<?php echo imageFeatured($post->ID,'medium'); //tamaños son: thumbnail, medium, large, full ?>">
                 <h4><?php echo get_the_title(); ?></h4>
                 <p><?php echo get_the_excerpt(); ?></p>
+                <a href="<?php echo get_permalink(); ?>"><div class="leer-mas-boton">Leer Más >></div></a>
             
             </article>
                <?php 
