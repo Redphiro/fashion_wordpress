@@ -21,13 +21,26 @@
 			
 			<?php endwhile; ?>
             <div class="contenedor" id="lightgallery">
-            	
-                     
-               
-                 
-                  
-                   
-        	</div>
+            	<?php if( get_post_field('galerias_tipo', $post->ID) == 'galerias'): ?>	
+        				<!--Fotos-->
+                        <?php 
+
+							$images = get_field('galerias_fotos');
+						
+							if( $images ): ?>
+								
+									<?php foreach( $images as $image ): ?>
+										<a href="<?php echo $image['url']; ?>">
+											 <img src="<?php echo $image['sizes']['thumbnail']; ?>" style="width: 100%">
+										</a>
+									<?php endforeach; ?>
+                        
+                        <!--/Fotos-->
+            
+                	<?php endif; ?>
+                <?php endif;?>
+            
+            </div>
             
         </section>
         
