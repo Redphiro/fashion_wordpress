@@ -21,57 +21,9 @@
 			
 			<?php endwhile; ?>
             <div class="contenedor" id="lightgallery">
-            	<!--
-                 <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-1.jpg">
-            		<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-1.jpg">
-            	  </a>
             	
-            
-            	
-                   <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-2.jpg">
-            		<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-2.jpg">
-            		</a>
-            	
-            
-            	
-                   <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		</a>
-            	
-                
-                
-                   <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		</a>
-            	
-                
-              
-                   <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		</a>
-            	
-                
-                
-                   <a href="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		<img src="<?php echo get_bloginfo('template_url'); ?>/img/articulo-3.jpg">
-            		</a>
-            	
-                   -->
-                 
-                 <?php 
-
-					$images = get_field('galerias_fotos');
-
-					if( $images ): ?>
-					
-						<?php foreach( $images as $image ): ?>
-							<a href="<?php echo $image['url']; ?>">
-								 <img src="<?php echo $image['sizes']['thumbnail']; ?>">
-							</a>
-						<?php endforeach; ?>
-					
-				<?php endif; ?>
-                 
+                     
+               
                  
                   
                    
