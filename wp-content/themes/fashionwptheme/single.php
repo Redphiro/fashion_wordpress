@@ -26,7 +26,7 @@ get_header ();?>
         				<!--Fotos-->
                         <?php 
 
-							$images = get_fields('galerias_fotos');
+							$images = get_field('galerias_fotos');
 							
 							//print_r($images);
 						
