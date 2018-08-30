@@ -1,5 +1,5 @@
 <?php get_header ();?>
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 <main>
     	<section id="banner">
         	<img src="<?php echo get_bloginfo('template_url'); ?>/img/banner.jpg">
@@ -16,37 +16,43 @@
 		   $my_query = new WP_Query('pagename=galeria');
 			while($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID;
            ?>
+           
         	<h2><?php echo get_the_title(); ?></h2>
             <p><?php echo get_the_content(); ?></p>
 			
 			<?php endwhile; ?>
-            <div class="contenedor" id="lightgallery">
-            	<?php if( get_post_field('galerias_tipo', $post->ID) == 'galerias'): ?>	
-        				<!--Fotos-->
-                        <?php 
-
-							$images = get_field('galerias_fotos');
-						
-							if( $images ): ?>
-								
-									<?php foreach( $images as $image ): ?>
-										<a href="<?php echo $image['url']; ?>">
-											 <img src="<?php echo $image['sizes']['thumbnail']; ?>" style="width: 100%">
-										</a>
-									<?php endforeach; ?>
-                        
-                        <!--/Fotos-->
+           <div class="contenedor">
+          	     <?php
+               	global $paged;
+			   	$my_query_current = $paged ? $paged : 1;
+			   	$my_query_args = array('paged' => $my_query_current,
+			                          'post_type' => 'galerias',
+									  'tipo_galerias' => $_GET['tipo'],
+									  );
+				$my_query = new WP_Query($my_query_args);
+				while ($my_query->have_posts()) : $my_query->the_post(); $do_not_duplicate = $post->ID; 					  
             
-                	<?php endif; ?>
-                <?php endif;?>
+            ?>
+            <article>
+            	<img src="<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>" class="img-responsive" style="width: 100%">
+                <h3><?php echo get_the_title(); ?></h3>
+                <a href="<?php echo get_permalink(); ?>"><div class="leer-mas-boton">Leer Más >></div></a>
             
-            </div>
+            </article>
+               <?php 
+				endwhile; 
+			  ?>
+              </div>
+              
+              
+              
+            
             
         </section>
         
         <!--/Contenedor Galeria-->
      
    </main>
-<?php endwhile; else: endif; ?>
+
 
 <?php get_footer ();?>
