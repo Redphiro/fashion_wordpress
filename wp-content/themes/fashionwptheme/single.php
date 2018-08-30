@@ -28,12 +28,12 @@ get_header ();?>
 
 							$images = get_fields('galerias_fotos');
 							
-							print_r($images);
+							//print_r($images);
 						
 							if( $images ): ?>
 								
 									<?php foreach( $images as $image ): ?>
-										<a href="<?php /*echo $image['url'];*/ /*print_r($image);*/ ?>">
+										<a href="<?php echo $image['url']; /*print_r($image);*/ ?>">
 											 <img src="<?php echo $image['sizes']['thumbnail']; ?>" style="width: 100%">
 										</a>
 									<?php endforeach; ?>
