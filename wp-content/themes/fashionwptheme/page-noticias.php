@@ -60,9 +60,18 @@
                <?php 
 				endwhile; 
 			  ?>
+              <section class="paginacion">
+              	<ul>
+                	<li><a href="#">&laquo;</a></li>
+					<li><a href="pagina1.html" class="active">1</a></li>
+					<li><a href="pagina2.html">2</a></li>
+					<li><a href="pagina3.html">3</a></li>
+					<li><a href="pagina4.html">4</a></li>
+					<li><a href="pagina5.html">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+			   </ul>
             
-            
-            
+              </section>
             </div>
             
             

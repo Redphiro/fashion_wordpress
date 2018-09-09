@@ -6,6 +6,7 @@
 @import url(galeria.css);
 @import url(contacto.css);
 @import url(single-noticias.css);
+@import url(paginacion.css);
 *{
 	margin:0;
 	padding:0;
