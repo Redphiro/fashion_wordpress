@@ -62,14 +62,46 @@
 			  ?>
               <section class="paginacion">
               	<ul>
-                	<li><a href="#">&laquo;</a></li>
+                	<!--<li><a href="#">&laquo;</a></li>
 					<li><a href="pagina1.html" class="active">1</a></li>
 					<li><a href="pagina2.html">2</a></li>
 					<li><a href="pagina3.html">3</a></li>
 					<li><a href="pagina4.html">4</a></li>
 					<li><a href="pagina5.html">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
+                    <li><a href="#">&raquo;</a></li>-->
+                    <?php
+					   $totalPageLimit = $my_query->query_vars['posts_per_page'];
+					   $totalPosts = $my_query->found_posts;
+					   if($totalPosts > $totalPageLimit):
+			$botonAnterior = get_pagenum_link(($my_query_current-1 > 0 ? $my_query_current-1 : 1));
+			$botonSiguiente = get_pagenum_link(($my_query_current+1 <= $my_query->max_num_pages ? $my_query_current+1 : $my_query->max_num_pages));
+				echo '<li><a href="'.$botonAnterior.'">
+						&laquo;
+					  </a> </li>';
+					  
+					    for($numPagina=1;$numPagina<=$my_query->max_num_pages;$numPagina++)
+						{
+						$paginaActiva = ($numPagina == $my_query_current ? 'active' : '');
+						
+                    	echo '<li><a class="'.$paginaActiva.'" href="'.get_pagenum_link($numPagina).'">'.$numPagina.'</a></li>';
+                    	}
+						 echo '<li>
+					  <a href="'.$botonSiguiente.'">
+						&raquo;
+					  </a>
+					</li>';
+           			 wp_reset_postdata();
+        			endif;
+						
+			
+					?>
+                   
+                  
+                    
+                    
 			   </ul>
+              
+               
             
               </section>
             </div>

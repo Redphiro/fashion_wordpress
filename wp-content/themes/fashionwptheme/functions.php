@@ -72,11 +72,7 @@ function custom_posts_per_page($query)
                 $query->query_vars['orderby'] = 'date';
                 break;
 				
-			case 'galerias':
-                $query->query_vars['posts_per_page'] = 3;
-                $query->query_vars['order'] = 'DESC';
-                $query->query_vars['orderby'] = 'date';
-                break;
+			
         }
         return $query;
     }
@@ -131,6 +127,7 @@ function getVideoID($url)
 
 	return $videoID;
 }
+
 
 
 
