@@ -1,13 +1,5 @@
 <?php get_header(); ?>
-    <main>
-    	<section id="banner">
-        	<img src="<?php echo get_bloginfo('template_url'); ?>/img/banner.jpg">
-            <div class="contenedor">
-            	<h2>Fashion Jeans</h2>
-                <p>Moda de los 90s</p>
-                <a href="#">Leer Mas</a>
-        	</div>
-        </section>
+    
         <section id="bienvenidos">
         	<h2>Bienvenido</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu quam laoreet, lacinia lectus vitae, efficitur lorem. Etiam vel rutrum elit, quis sodales erat. Sed congue urna ut libero egestas cursus. Suspendisse turpis nulla, mollis sit amet ullamcorper et, placerat quis lacus. Sed vel arcu scelerisque.</p>

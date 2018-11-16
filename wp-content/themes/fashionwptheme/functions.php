@@ -1,5 +1,84 @@
-
 <?php
+
+/*
+ * Custom excerpt word limit
+ * Info: It will affect to get_the_excerpt();
+ */
+function custom_excerpt_length($length)
+{
+	global $typenow;
+	$amount = 25;
+	
+	//if("page" == $typenow){ 
+	//	$amount = 150; 
+	//}
+	
+	return $amount;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+/*
+ * Custom excerpt append word
+ * Info: It will affect to get_the_excerpt();
+ */
+function custom_excerpt_more($more)
+{
+    return ' ...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
+//Paginador galerias
+function custom_paginator($offset, $limit, $totalnum)
+	{
+		
+		if ($totalnum > $limit)
+		{
+			$pages = intval($totalnum / $limit);
+
+			if ($totalnum % $limit){
+				$pages++;
+			}
+			if(($offset + $limit) > $totalnum){
+				$lastnum = $totalnum;
+			}
+			else{
+				$lastnum = ($offset + $limit);
+			}
+			if(isset($_GET['pag'])){ 
+				$pageCurrent = $_GET['pag'];
+			}
+			else{
+				$pageCurrent = 1;
+			}
+			
+			$pagePrev = $pageCurrent-1; $pageNumPrev = ($pageCurrent*$limit)-$limit*2;
+			$pageNext = $pageCurrent+1; $pageNumNext = $pageCurrent*$limit;
+			
+			if($pagePrev <= 1){
+				$pagePrev = 1;
+				$pageNumPrev = 0;
+			} 
+			if($pageNext > $pages){
+				$pageNext = $_GET['pag'];
+				$pageNumNext = $_GET['num'];
+			}
+			echo '<li><a class="prev" href="?pag='.$pagePrev.'&num='.$pageNumPrev.'">&laquo;</a></li>';	
+				for($i = 1; $i <= $pages; $i++)
+				{
+					$newoffset = $limit * ($i - 1);
+
+					if($newoffset != $offset) 
+					{
+						echo '<li><a href="?pag='.$i.'&num='.$newoffset.'">'.$i.'</a></li>';
+					} 
+					else
+					{
+						echo '<li><a href="?pag='.$i.'&num='.$newoffset.'" class="active">'.$i.'</a></li>';
+					}
+				}
+			echo '<li><a class="next" href="?pag='.$pageNext.'&num='.$pageNumNext.'">&raquo;</a></li>';
+		}
+		return;
+	}
 
 //Habilitar campos para editor de template
 $customize_theme_fields = array( //slug - titulo boton - descripcion - instruccion - valor x defecto
