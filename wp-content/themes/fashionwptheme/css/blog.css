@@ -34,7 +34,9 @@
 #blog .img-noticia{
  width:100%;	
  height:250px;	
-
+ background-repeat:no-repeat; 
+ background-position:top center; 
+ background-size:cover;
 }
 
 

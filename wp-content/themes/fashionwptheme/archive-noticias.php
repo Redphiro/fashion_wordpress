@@ -42,9 +42,10 @@
             
             ?>
             <article>
+                <div class="img-noticia" style="background-image: url('<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>'); background-repeat:no-repeat; background-position:top center; background-size:cover;">
                 
-            	<img src="<?php echo imageFeatured($post->ID,'medium'); //tamaños son: thumbnail, medium, large, full ?>">
-                
+            	<!--<img src="<?php //echo imageFeatured($post->ID,'medium'); //tamaños son: thumbnail, medium, large, full ?>">-->
+                </div>             
                 <h4><?php echo get_the_title(); ?></h4>
                 <p><?php echo get_the_excerpt(); ?></p>
                 <a href="<?php echo get_permalink(); ?>"><div class="btn leer-mas-boton">Leer Más >></div></a>

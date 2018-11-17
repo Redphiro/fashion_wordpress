@@ -5,6 +5,16 @@
 	
 }
 
+#galeria .img-galeria{
+	 width:100%;
+	 max-width:280px;	
+	 height:250px;
+	 background-repeat:no-repeat; 
+	 background-position:top center; 
+	 background-size:cover;	
+
+}
+
 
 #galeria .contenedor{
 	display:flex;
@@ -15,7 +25,7 @@
 
 #galeria article{
 	margin:15px;
-	
+	width:30%;
 	
 }
 
@@ -25,13 +35,13 @@
 	
 }
 
-#galeria img{
+/*#galeria img{
 	width:100%;
 	max-width:280px;
 	
 	
 }
-
+*/
 
 @media (min-width:1024px){
 

@@ -26,7 +26,10 @@
             
             ?>
             <article>
-            	<img src="<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>" class="img-responsive" style="width: 100%">
+              <div class="img-galeria" style="background-image: url('<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>');">
+            
+            	<!--<img src="<?php //echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>" class="img-responsive" style="width: 100%">-->
+              </div>
                 <h3><?php echo get_the_title(); ?></h3>
                 <a style="color:#fff;" href="<?php echo get_permalink(); ?>"><div class="btn" style="background-color:#ccc;">Leer Más >></div></a>
             
