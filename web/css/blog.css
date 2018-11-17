@@ -18,11 +18,15 @@
 	
 	
 }
-
 #blog img{
 	width:100%;
 	max-width:280px;
+	
 }
+
+
+
+
 
 @media (min-width:1024px){
 
@@ -30,4 +34,5 @@
     	display: inline-flex;
 		
 	}
+	
 }

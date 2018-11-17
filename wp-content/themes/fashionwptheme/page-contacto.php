@@ -31,7 +31,7 @@
 						$formulario_vacio = false;
 						$formulario_enviado = true;
 						
-						$correo_destinatario = 'admin@gznetwork.com';
+						$correo_destinatario = 'sebastian.alvcort@gmail.com';
 						$correo_cabeceras = array('Content-Type: text/html; charset=UTF-8');
 						$correo_asunto = 'Contacto sitio web de '.$_POST['correo'];
 						$correo_html = '<h1>Contacto sitio web</h1>
@@ -69,7 +69,8 @@
 						<input type="tel" name="telefono" class="telefono" placeholder="Telefono" value="<?php echo $_POST['telefono']; ?>">
 						<textarea name="mensaje" id="" class="mensaje" placeholder="Mensaje:"><?php echo $_POST['mensaje']; ?></textarea>
 						<!-- Campos -->
-						<button name="enviar" id="boton" class="boton_envio">Enviar</button>
+						<!--<button name="enviar" id="boton" class="boton_envio">Enviar</button>-->
+                        <button name="enviar" class="btn btn-primary btn-lg btn-block">Enviar</button>
 					</form>
 				
 				<?php endif; ?>

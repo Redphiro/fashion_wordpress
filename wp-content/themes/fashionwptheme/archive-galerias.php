@@ -28,7 +28,7 @@
             <article>
             	<img src="<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>" class="img-responsive" style="width: 100%">
                 <h3><?php echo get_the_title(); ?></h3>
-                <a href="<?php echo get_permalink(); ?>"><div class="leer-mas-boton">Leer Más >></div></a>
+                <a style="color:#fff;" href="<?php echo get_permalink(); ?>"><div class="btn" style="background-color:#ccc;">Leer Más >></div></a>
             
             </article>
                <?php 

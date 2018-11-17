@@ -6,11 +6,11 @@
            	<h2><?php echo get_the_title(); ?></h2>
             <hr />
            <div class="row">
-              <article class="columnas">         
+              <article class="col-md-6 columnas">         
               <p><img src="<?php echo imageFeatured($post->ID,'full'); //tamaños son: thumbnail, medium, large, full ?>" class="img-responsive" style="width: 100%"></p>
 			   </article>
             
-              <article class="columnas">
+              <article class="col-md-6 columnas">
               <p><?php echo get_the_content(); ?></p>
               <a class="boton-volver" href="<?php echo get_bloginfo('url'); ?>/noticias">&laquo; Listado noticias</a>
                </article>      

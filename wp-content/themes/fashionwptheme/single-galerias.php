@@ -33,19 +33,21 @@ get_header ();?>
 							if( $images ): ?>
 								
 								<?php for($num = $gallery_number; $num < $gallery_counter; $num++): $image = $gallery_item[$num]; ?>
-									<a href="<?php echo $image['url']; /*print_r($image);*/ ?>">
-										 <img src="<?php echo $image['sizes']['thumbnail']; ?>" style="width: 100%">
+									<div class="col-md-3">
+                                    <a href="<?php echo $image['url']; /*print_r($image);*/ ?>">
+										 <img src="<?php echo $image['sizes']['thumbnail']; ?>" style="width: 100%;">
 									</a>
+                                    </div>
 								<?php endfor; ?>
 
                 			<?php endif; ?>
 				
                 <?php endif;?>
-            
             </div>
             
+            
         </section>
-	
+	    
 		<section class="paginacion">
 			<ul>
 				<?php custom_paginator($gallery_number, $gallery_limit, $gallery_total); ?>
